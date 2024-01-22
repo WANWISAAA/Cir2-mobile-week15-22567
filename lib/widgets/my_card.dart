@@ -8,7 +8,7 @@ class Menu {
 }
 
 List<Menu> menu = [
-  const Menu(title: 'MENU-1', icon: Icons.percent, bkColor: Colors.purple),
+  const Menu(title: 'MENU-1', icon: Icons.person, bkColor: Colors.purple),
 ];
 
 class MyCard extends StatelessWidget {
@@ -25,21 +25,20 @@ class MyCard extends StatelessWidget {
       body: Container(
         child: GridView.count(
           crossAxisCount: 3,
-          children: List.generate(3, (index) {
+          children: List.generate(menu.length, (index) {
             return Card(
+              color: menu[index].bkColor ,
               margin: const EdgeInsets.all(12),
               child: InkWell(
                 onTap: () {
-                  debugPrint('MYCARD-1');
+                  debugPrint('${menu[index].title}');
                 },
-                child: const Center(
+                child: Center(
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Icon(Icons.home, size: 40, color: Colors.blueAccent),
-                      Text("Home",
-                          style:
-                              TextStyle(fontSize: 15.0, color: Colors.black)),
+                      Icon(menu[index].icon, size: 40, color: Colors.blueAccent),
+                      Text('${menu[index].title}',style:const TextStyle(fontSize: 15.0, color: Colors.black)),
                     ],
                   ),
                 ),
