@@ -11,7 +11,16 @@ class MyCard extends StatelessWidget {
         backgroundColor: Colors.purple,
         title: const Text("My Card"),
       ),
-      body: Container(),
+      body: Container(
+        child: GridView.count(
+          crossAxisCount: 3,
+          children: List.generate(3, (index) {
+            return const Card(
+              margin: EdgeInsets.all(12),
+            );
+          }),
+        ),
+      ),
     );
   }
 }
