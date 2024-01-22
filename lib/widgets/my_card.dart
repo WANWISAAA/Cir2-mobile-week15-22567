@@ -1,5 +1,16 @@
 import 'package:flutter/material.dart';
 
+class Menu {
+  final String? title;
+  final IconData? icon;
+  final Color? bkColor;
+  const Menu({this.title, this.icon, this.bkColor});
+}
+
+List<Menu> menu = [
+  const Menu(title: 'MENU-1', icon: Icons.percent, bkColor: Colors.purple),
+];
+
 class MyCard extends StatelessWidget {
   //1.Constructor
   const MyCard({super.key});
@@ -26,7 +37,9 @@ class MyCard extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Icon(Icons.home, size: 40, color: Colors.blueAccent),
-                      Text("Home",style:TextStyle(fontSize: 15.0, color: Colors.black)),
+                      Text("Home",
+                          style:
+                              TextStyle(fontSize: 15.0, color: Colors.black)),
                     ],
                   ),
                 ),
