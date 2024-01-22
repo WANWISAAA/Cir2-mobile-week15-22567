@@ -21,6 +21,15 @@ class MyCard extends StatelessWidget {
                 onTap: () {
                   debugPrint('MYCARD-1');
                 },
+                child: const Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(Icons.home, size: 40, color: Colors.blueAccent),
+                      Text("Home",style:TextStyle(fontSize: 15.0, color: Colors.black)),
+                    ],
+                  ),
+                ),
               ),
             );
           }),
