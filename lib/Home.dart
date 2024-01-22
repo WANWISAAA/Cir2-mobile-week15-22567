@@ -28,73 +28,67 @@ class HomePage extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.home),
               title: const Text('Home'),
-              onTap: () {
-                Navigator.pushReplacement(
+              onTap: () async {
+                await Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const HomePage(),
-                  ),
+                  MaterialPageRoute(builder: (context) => const HomePage()),
                 );
+                debugPrint("Home Page");
               },
             ),
             ListTile(
               leading: const Icon(Icons.apps),
               title: const Text('Row widget'),
-              onTap: () {
-                Navigator.pushReplacement(
+              onTap: () async {
+                await Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const RowPage(),
-                  ),
+                  MaterialPageRoute(builder: (context) => const RowPage()),
                 );
+                debugPrint("Row widget");
               },
             ),
             ListTile(
               leading: const Icon(Icons.apps),
               title: const Text('Column widget'),
-              onTap: () {
-                Navigator.pushReplacement(
+              onTap: () async {
+                await Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const ColumnPage(),
-                  ),
+                  MaterialPageRoute(builder: (context) => const ColumnPage()),
                 );
+                debugPrint("Column widget");
               },
             ),
             ListTile(
               leading: const Icon(Icons.person),
               title: const Text('List View widget'),
-              onTap: () {
-                Navigator.pushReplacement(
+              onTap: () async {
+                await Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const ListViewMenu(),
-                  ),
+                  MaterialPageRoute(builder: (context) => const ListViewMenu()),
                 );
+                debugPrint("List View widget");
               },
             ),
             ListTile(
               leading: const Icon(Icons.credit_score),
               title: const Text('Card and Inkwell widget'),
-              onTap: () {
-                Navigator.pushReplacement(
+              onTap: () async {
+                await Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const CardDemo(),
-                  ),
+                  MaterialPageRoute(builder: (context) => const CardDemo()),
                 );
+                debugPrint("Card and Inkwell widget");
               },
             ),
             ListTile(
               leading: const Icon(Icons.credit_card),
               title: const Text('My Card'),
-              onTap: () {
-                Navigator.pushReplacement(
+              onTap: () async {
+                await Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const MyCard(),
-                  ),
+                  MaterialPageRoute(builder: (context) => const MyCard()),
                 );
+                debugPrint("My Card");
               },
             ),
           ],
