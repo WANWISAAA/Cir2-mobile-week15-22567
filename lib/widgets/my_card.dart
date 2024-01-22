@@ -15,8 +15,13 @@ class MyCard extends StatelessWidget {
         child: GridView.count(
           crossAxisCount: 3,
           children: List.generate(3, (index) {
-            return const Card(
-              margin: EdgeInsets.all(12),
+            return Card(
+              margin: const EdgeInsets.all(12),
+              child: InkWell(
+                onTap: () {
+                  debugPrint('MYCARD-1');
+                },
+              ),
             );
           }),
         ),
